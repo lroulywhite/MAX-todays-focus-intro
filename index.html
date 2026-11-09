@@ -118,6 +118,65 @@
     .pin{width:22px;height:22px;font-size:11px}
   }
   @media (prefers-reduced-motion: reduce){ .stage{scroll-behavior:auto} *{transition:none!important} }
+
+  /* ===== Larger notes for embedding (360Learning / Genially) =====
+     Adjust the sizes below to scale the whole side panel. */
+  .main{grid-template-columns:minmax(0,1fr) clamp(440px,38vw,560px)}
+  .guide{min-width:0;overflow:hidden}
+  .topbar b{font-size:18px}
+  .topbar span{font-size:15px}
+  .guide-body{padding:28px 32px 16px}
+  .tag{font-size:15px;padding:6px 16px;margin-bottom:16px}
+  h1{font-size:36px;line-height:1.15;margin-bottom:16px}
+  .lede{font-size:21px;line-height:1.55;margin-bottom:20px}
+  .card{padding:18px 20px;margin-bottom:16px}
+  .card h2{font-size:15px;letter-spacing:.02em;margin-bottom:8px}
+  .card p{font-size:19px;line-height:1.55}
+  .parts{gap:10px;margin:4px 0 14px}
+  .chip{font-size:18px;padding:11px 20px;min-height:46px}
+  .part-text{font-size:19px;line-height:1.55;padding:16px 18px;margin-bottom:14px}
+  .callout{font-size:19px;line-height:1.55;padding:18px 22px}
+  .callout b{font-size:15px;margin-bottom:6px}
+  .daily li{font-size:19px;line-height:1.5;padding-left:40px;margin-bottom:12px}
+  .daily li::before{width:28px;height:28px;font-size:15px;top:0}
+  .nav{padding:16px 32px;gap:14px}
+  .btn{font-size:19px;font-weight:600;padding:13px 28px;min-height:50px;border-radius:10px}
+  .dots{gap:10px}
+  .dot{width:14px;height:14px}
+  .pin{width:36px;height:36px;font-size:16px}
+
+  @media (max-width: 1200px){
+    .main{grid-template-columns:minmax(0,1fr) clamp(420px,42vw,520px)}
+    .guide-body{padding:24px 26px 12px}
+    h1{font-size:32px}
+    .lede{font-size:20px}
+    .card p,.part-text,.callout,.daily li{font-size:18px}
+    .nav{padding:14px 26px}
+    .dots{display:none}
+    .btn{flex:1}
+  }
+  @media (max-width: 900px){
+    .main{grid-template-columns:1fr;grid-template-rows:minmax(0,36%) minmax(0,64%)}
+    .guide-body{padding:20px 22px 10px}
+    .lede{font-size:19px}
+    .chip{padding:12px 18px}
+    .nav{padding:12px 22px}
+    .dots{display:none}
+    .btn{flex:1}
+  }
+  @media (max-width: 900px) and (orientation: landscape) and (max-height: 560px){
+    .main{grid-template-columns:minmax(0,1fr) 400px;grid-template-rows:none}
+    h1{font-size:26px;margin-bottom:10px}
+    .lede{font-size:18px}
+    .card{padding:12px 14px;margin-bottom:10px}
+    .card p,.part-text,.callout,.daily li{font-size:17px}
+    .btn{font-size:17px;padding:10px 22px;min-height:44px}
+  }
+  @media (max-width: 480px){
+    h1{font-size:27px}
+    .tag{font-size:14px}
+    .pin{width:28px;height:28px;font-size:13px}
+  }
 </style>
 </head>
 <body>
